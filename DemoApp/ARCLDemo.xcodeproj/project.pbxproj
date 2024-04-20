@@ -62,6 +62,7 @@
 		9EBF510A264F0ED900C5CFEF /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBF5109264F0ED900C5CFEF /* MapViewModel.swift */; };
 		9EBF510D264F156500C5CFEF /* MapContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBF510C264F156500C5CFEF /* MapContainer.swift */; };
 		9EBF5110264F172C00C5CFEF /* SystemIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBF510F264F172C00C5CFEF /* SystemIconButton.swift */; };
+		B02FE8E92BD43E5A00D55A33 /* predictions.geojson in Resources */ = {isa = PBXBuildFile; fileRef = B02FE8E82BD43E5A00D55A33 /* predictions.geojson */; };
 		B03A0C9B2BD42BCA008C2AA0 /* ExampleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A0C982BD42BCA008C2AA0 /* ExampleProtocol.swift */; };
 		B03A0C9C2BD42BCA008C2AA0 /* PointClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A0C992BD42BCA008C2AA0 /* PointClusterView.swift */; };
 		B03A0C9D2BD42BCA008C2AA0 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03A0C9A2BD42BCA008C2AA0 /* Example.swift */; };
@@ -127,6 +128,7 @@
 		9EBF5109264F0ED900C5CFEF /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		9EBF510C264F156500C5CFEF /* MapContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapContainer.swift; sourceTree = "<group>"; };
 		9EBF510F264F172C00C5CFEF /* SystemIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemIconButton.swift; sourceTree = "<group>"; };
+		B02FE8E82BD43E5A00D55A33 /* predictions.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = predictions.geojson; path = ARCLDemo/predictions.geojson; sourceTree = SOURCE_ROOT; };
 		B03A0C982BD42BCA008C2AA0 /* ExampleProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleProtocol.swift; sourceTree = "<group>"; };
 		B03A0C992BD42BCA008C2AA0 /* PointClusterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointClusterView.swift; path = HackathonProjects/Data4Goodproject/Data4Goodproject/PointClusterView.swift; sourceTree = "<group>"; };
 		B03A0C9A2BD42BCA008C2AA0 /* Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 		9EB1598E265BD87100402CBD /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				B02FE8E82BD43E5A00D55A33 /* predictions.geojson */,
 				9EBF5106264F0C8600C5CFEF /* OldMapView.swift */,
 				B03A0C9A2BD42BCA008C2AA0 /* Example.swift */,
 				B03A0C982BD42BCA008C2AA0 /* ExampleProtocol.swift */,
@@ -477,6 +480,7 @@
 				9E5EE551265159400026E740 /* toy_biplane.usdz in Resources */,
 				9EBF50F7264EAC9E00C5CFEF /* Assets.xcassets in Resources */,
 				9E5EE550265159400026E740 /* toy_car.usdz in Resources */,
+				B02FE8E92BD43E5A00D55A33 /* predictions.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

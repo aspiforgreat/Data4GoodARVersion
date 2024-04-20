@@ -20,9 +20,9 @@ struct HomeView: View {
                 // Map Container 1/3 of total screen size
                 
                 ARContainer()
-                    .frame(width: geometry.size.width, height: geometry.size.height * 1/2)
+                    .frame(width: geometry.size.width, height: geometry.size.height * 2/3)
                 MapContainer()
-                    .frame(width: geometry.size.width, height: geometry.size.height * 1/2)
+                    .frame(width: geometry.size.width, height: geometry.size.height * 1/3)
             }
         }
         .edgesIgnoringSafeArea(.all)
