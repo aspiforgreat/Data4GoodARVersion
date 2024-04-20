@@ -1,0 +1,10 @@
+
+platform :ios, '15.0'
+use_frameworks!
+
+target 'ARCLDemo' do
+  pod 'MapboxMaps', '11.3.0'
+  pod 'ARCL'
+end
+ 
+ 
