@@ -1,0 +1,24 @@
+{
+  "originHash" : "74c70fa45f5eb791abe99996cc52e9971dc0791f131ad3b009b857235b039f70",
+  "pins" : [
+    {
+      "identity" : "focusentity",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/maxxfrazer/FocusEntity",
+      "state" : {
+        "revision" : "5fa521172e447cbfa8c2fc1d6602d9d6bed202c7",
+        "version" : "2.5.1"
+      }
+    },
+    {
+      "identity" : "location-based-ar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mist3r-R/location-based-ar.git",
+      "state" : {
+        "revision" : "7c480930f5c43fe664b04154e65a2abeca65713d",
+        "version" : "1.0.1"
+      }
+    }
+  ],
+  "version" : 3
+}

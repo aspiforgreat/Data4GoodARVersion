@@ -19,16 +19,20 @@ struct PointClusteringExampleRepresentable: UIViewControllerRepresentable {
         // Update the view controller if needed
     }
 }
+
+
 final class PointClusteringExample: UIViewController, ExampleProtocol {
     private var mapView: MapView!
     private var cancelables = Set<AnyCancelable>()
+    private var locationTrackingCancellation: AnyCancelable?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Initialize a map view centered over the United States and using the Mapbox Dark style.
-        let center = CLLocationCoordinate2D(latitude: 40.669957, longitude: -103.5917968)
-        let cameraOptions = CameraOptions(center: center, zoom: 2)
+        let center = CLLocationCoordinate2D(latitude: 52.52, longitude: 13.405) // Updated coordinates for Berlin
+        let cameraOptions = CameraOptions(center: center, zoom: 8) // Updated zoom level to 10
+
         let mapInitOptions = MapInitOptions(cameraOptions: cameraOptions, styleURI: .dark)
 
         mapView = MapView(frame: view.bounds, mapInitOptions: mapInitOptions)
@@ -40,6 +44,29 @@ final class PointClusteringExample: UIViewController, ExampleProtocol {
         mapView.mapboxMap.onStyleLoaded.observeNext { [weak self] _ in
             self?.addPointClusters()
         }.store(in: &cancelables)
+
+        setupLocationTracking()
+    }
+
+    func setupLocationTracking() {
+        var puckConfiguration = Puck2DConfiguration.makeDefault()
+        puckConfiguration.pulsing = .default
+        mapView.location.options.puckType = .puck2D(puckConfiguration)
+        mapView.location.options.puckBearingEnabled = true
+
+        // Update the camera's centerCoordinate when a locationUpdate is received.
+        startTracking()
+    }
+
+    func startTracking() {
+        locationTrackingCancellation = mapView.location.onLocationChange.observe { [weak mapView] newLocation in
+            guard let location = newLocation.last, let mapView = mapView else { return }
+            mapView.camera.ease(to: CameraOptions(center: location.coordinate, zoom: 10), duration: 1.3)
+        }
+    }
+
+    func stopTracking() {
+        locationTrackingCancellation = nil
     }
 
     func addPointClusters() {
